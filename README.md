@@ -32,3 +32,8 @@ The zip file attached here are training session via examples.
         print("i out of range")
 
    
+3. Create a local pull request of this project (local branch).
+4. Create a folder and name it with your first name or nickname inside this project.
+5. Create an github instruction guide (txt file) on how to create a local pull request and how to merge it to a remote repository (using this repo).
+6. Add your final solution and your instruction guide.
+7. Merge it to remote repository (this repo).
