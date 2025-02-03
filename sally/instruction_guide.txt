@@ -1,0 +1,10 @@
+--Activate virtual environment in VS code bash terminal
+1. cd C:/Users/SGANO/Documents/PythonTrainingVenv
+2. source Scripts/activate
+--Clone repository to local
+3. git clone https://github.com/Tony0-77/python_exercises
+4. git status
+5. git checkout github_how_to
+6. git pull
+7. git add .
+
