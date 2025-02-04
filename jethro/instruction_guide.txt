@@ -1,0 +1,17 @@
+1. clone repository to local
+- git clone https://github.com/Tony0-77/python_exercises.git
+2. change working directory to the cloned repo
+- cd {repo}
+3. this will enter you to the main repo. to check if the clone is up to date
+- git status
+4. switch to branch github_how_to
+- git checkout github_how_to
+5. to get the updated file from branch repo
+- git pull
+6. add the new folder to your local
+- git add .
+7. to check the difference of local vs remote
+- git status (again)
+8. commit to save the changes to local repo
+- git commit -m 'added files for solution and instruction'
+9. push changes to remote repo
