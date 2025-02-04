@@ -12,9 +12,3 @@
 6. git commit -m "initial commit for github instructions"
 // upload changes on your current branch(github_how_to) on your local machine to github remotely
 7. git push -u origin github_how_to
-// switch back to main branch
-8. git switch main
-// pull contents from github_how_to branch
-9. git pull origin github_how_to
-// upload changes from current branch(main)
-10. git push -u origin main
