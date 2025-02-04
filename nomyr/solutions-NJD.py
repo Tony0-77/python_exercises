@@ -728,3 +728,311 @@ for i in range(1, n + 1):
     factorial *= i
 
 print(f"The factorial of {n} is: {factorial}")
+
+##exercise 64-71.1
+num = int(input("Enter a number: "))
+
+if num <= 1:
+    print("Not prime")
+else:
+    is_prime = True
+
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print("Prime")
+    else:
+        print("Not prime")
+
+##exercise 64-71.3
+n = int(input("Enter the number of rows: "))
+
+for i in range(1, n + 1):
+    print('* ' * i)
+
+
+##exercise 64-71.5
+number = input("Enter a number: ")
+
+for digit in reversed(number):
+    print(digit, end="")
+
+
+##exercise 64-71.7
+string = input("Enter a string: ")
+
+for i in range(len(string) - 1, -1, -1):
+    print(string[i], end="")
+
+##exercise 64-71.10
+n = int(input("Enter the number of rows: "))
+
+for i in range(1, n + 1):
+    for j in range(n - i):
+        print(" ", end="")
+    
+    for k in range(i):
+        print("*", end=" ")
+    
+    print()
+
+##exercise 64-71.12
+n = int(input("Enter the number of rows: "))
+
+num = 1
+
+for i in range(1, n + 1):
+    for j in range(i):
+        print(num, end=" ")
+        num += 1 
+    print()  
+
+
+##exercise 64-71.14
+n = int(input("Enter the number of rows: "))
+
+for i in range(1, n + 1):
+    letter = chr(64 + i)
+    
+    print(" ".join([letter] * i))
+
+##exercise 64-71.16
+height = int(input("Enter the height of the diamond (odd number only): "))
+
+if height % 2 == 0:
+    print("Please enter an odd number for the height.")
+else:
+    for i in range(1, height + 1, 2):
+        spaces = (height - i) // 2
+        print(" " * spaces + "*" * i)
+
+    for i in range(height - 2, 0, -2):
+        spaces = (height - i) // 2
+        print(" " * spaces + "*" * i)
+
+
+##exercise 72-76.2
+def recursive_sum(numbers):
+    if not numbers:
+        return 0
+    return numbers[0] + recursive_sum(numbers[1:])
+
+numbers = [1, 2, 3, 4, 5]
+print(recursive_sum(numbers))
+
+##exercise 72-76.4
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+n = 6
+print(fibonacci(n))
+
+##exercise 72-76.6
+def factorial(num):
+    if num == 0 or num == 1:
+        return 1
+    else:
+        return num * factorial(num - 1)
+
+num = 5
+print(f"The factorial of {num} is: {factorial(num)}")
+
+
+##exercise 72-76.9
+def sum_of_digits(num):
+    if num == 0:
+        return 0
+    else:
+        return num % 10 + sum_of_digits(num // 10)
+
+num = 123
+print(f"The sum of the digits of {num} is: {sum_of_digits(num)}")
+
+##exercise 72-76.11
+def power(a, b):
+    if b == 0:
+        return 1
+    else:
+        return a * power(a, b - 1) 
+
+a = 2
+b = 5
+result = power(a, b)
+print(f"{a} raised to the power of {b} is: {result}")
+
+##exercise 77-82.1
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+# Example usage
+a = 56
+b = 98
+print(f"The GCD of {a} and {b} is: {gcd(a, b)}")
+
+##exercise 77-82.3
+string = input("Enter a string: ").lower()
+
+if string == string[::-1]:
+    print(True)
+else:
+    print(False)
+
+##exercise 77-82.5
+def count_vowels(string):
+    if not string:
+        return 0
+    
+    if string[0].lower() in 'aeiou':
+        return 1 + count_vowels(string[1:])
+    else:
+        return count_vowels(string[1:])
+
+input_string = input("Enter a string: ")
+
+print(count_vowels(input_string))
+
+##exercise 77-82.8
+def print_pattern(n):
+    if n > 0:
+        print('*' * n)
+        print_pattern(n - 1)
+
+n = int(input("Enter the number of rows (n): "))
+print_pattern(n)
+
+##exercise 77-82.10
+def decimal_to_binary(n):
+    if n == 0:
+        return "0"
+    elif n == 1:
+        return "1"
+    return decimal_to_binary(n // 2) + str(n % 2)
+
+n = int(input("Enter a decimal number: "))
+print(decimal_to_binary(n))
+
+##exercise 77-82.12
+def binary_search(arr, target, low, high):
+    if low > high:
+        return -1
+    
+    mid = (low + high) // 2
+
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] > target:
+        return binary_search(arr, target, low, mid - 1)
+    else:
+        return binary_search(arr, target, mid + 1, high)
+
+arr = [1, 3, 5, 7, 9, 11, 13]
+target = int(input("Enter number to search: "))
+
+result = binary_search(arr, target, 0, len(arr) - 1)
+
+if result != -1:
+    print(f"Found at index {result}")
+else:
+    print("Not found")
+
+##exercise 83-87.2
+with open('2.1 basic_file.txt', 'r') as file:
+    file_content = file.readlines()
+file_content = [line.strip() for line in file_content]
+
+print(file_content)
+
+##exercise 83-87.4
+n = int(input("Enter the number of lines to print: "))
+
+with open('3.1 basic_file.txt', 'r') as file:
+    file_content = file.readlines()
+
+if n > len(file_content):
+    print(f"Please enter a value for n. The file has {len(file_content)} lines.")
+else:
+    for i in range(n):
+        print(file_content[i].strip())
+
+##exercise 83-87.7
+n = int(input("Enter the number of last lines to print: "))
+
+with open('8.1 basic_file.txt', 'r') as file:
+    file_content = file.readlines()
+
+if n <= len(file_content):
+    for line in file_content[-n:]:
+        print(line.strip())
+else:
+    print(f"The file has only {len(file_content)} lines.")
+
+
+##exercise 83-87.9
+with open('10.1 words.txt', 'r') as file:
+    words = [line.strip() for line in file.readlines()]
+
+longest_word = max(words, key=len)
+
+print(longest_word)
+
+##exercise 83-87.11
+word_frequency = {}
+
+with open('12.1 words.txt', 'r') as file:
+    for line in file:
+        word = line.strip()
+        
+        if word in word_frequency:
+            word_frequency[word] += 1
+        else:
+            word_frequency[word] = 1
+
+print(word_frequency)
+
+##exercise 88-91.1
+elements = [1, 2, 3, 4, 5]
+
+with open('mywords.txt', 'w') as file:
+    for element in elements:
+        file.write(str(element) + '\n')
+
+print("List elements have been written to the file.")
+
+##exercise 88-91.3
+with open('words.txt', 'r') as file:
+    total_chars = 0
+    
+    for line in file:
+        line = line.strip().replace(' ', '')
+        total_chars += len(line)
+
+print(f"Total Number of Characters: {total_chars}")
+
+##exercise 88-91.6
+with open('7.2 famous_quotes.txt', 'r') as source_file, open('destination.txt', 'w') as destination_file:
+    content = source_file.read()
+    
+    destination_file.write(content)
+
+print("File copied successfully.")
+
+##exercise 88-91.8
+import os
+
+file_path = input("Enter the file path or name: ")
+
+if os.path.isfile(file_path):
+    print(f"The file {file_path} exists")
+else:
+    print(f"The file {file_path} doesn't exist")
