@@ -1,0 +1,13 @@
+1. git branch github_how_to
+    -this is to create a branch in your local machine
+2. git switch github_how_to
+    -to switch branch from main to github_how_to 
+3. git status
+    -check the changes made in the branch
+4. git pull origin github_how_to
+    -pull the changes made from the stage to your local machine
+5. git add .
+    -add the changes made from your local machine
+6. git commit -m "commit for hannah solutions and github guide"     
+    -add message to your commit
+7. git push -u origin github_how_to
