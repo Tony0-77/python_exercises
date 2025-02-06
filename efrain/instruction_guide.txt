@@ -1,0 +1,39 @@
+# Step by Step Instruction for GitHub Pull Request and Merge to Repository
+
+1. You can either clone the repository using the GitHub Desktop application or clone it directly from the terminal and open it in Visual Studio Code.
+
+2. Check your current branches with the following command:
+	git branch
+
+3. Create a new branch to work on by running
+	git branch github_how_to
+
+4. Pull the latest changes from the github_how_to branch on the remote repository:
+	git pull origin github_how_to
+
+5. Confirm that you're on the correct branch:
+	git branch
+
+6. Switch to the newly created branch
+	git switch github_how_to
+
+7.  In Visual Studio Code, create a folder and add the files you want to upload to the repository.
+
+8. Go back to your terminal and check the status of your repository
+	git branch
+	git pull origin github_how_to
+
+9.Go back to your terminal and check the status of your repository:
+	git status 
+
+10. Stage all your changes for commit:
+	git add .
+
+11. Verify the staged changes
+	git status
+
+12. Commit the changes with an appropriate message:
+	git commit -m "message"
+
+13. Push the changes to your branch on GitHub:
+	git push -u origin github_how_to
