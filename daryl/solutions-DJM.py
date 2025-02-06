@@ -652,49 +652,49 @@ else:
 
 ## EXERCISE 51-56.10
 
-#Add = 1
-#Substract = 2
-#Multiply = 3
-#Divide = 4
-#Integer_Division = 5
-#Modulo = 6
+Add = 1
+Substract = 2
+Multiply = 3
+Divide = 4
+Integer_Division = 5
+Modulo = 6
 
-#print("=== Welcome to your Interactive Python Calculator ===")
+print("=== Welcome to your Interactive Python Calculator ===")
 
-#a = int(input("Please enter the first value: "))
-#b = int(input("Please enter the second value: "))
+a = int(input("Please enter the first value: "))
+b = int(input("Please enter the second value: "))
 
-#print("Great! Now enter the operation.")
-#print("These are the available options:")
-#print("1 - Addition")
-#print("2 -Subtraction")
-#print("3 - Multiplication")
-#print("4 - Division")
-#print("5 - Integer Division")
-#print("6 - Modulo")
+print("Great! Now enter the operation.")
+print("These are the available options:")
+print("1 - Addition")
+print("2 -Subtraction")
+print("3 - Multiplication")
+print("4 - Division")
+print("5 - Integer Division")
+print("6 - Modulo")
 
-#operation = int(input("--> Enter the corresponding integer: "))
+operation = int(input("--> Enter the corresponding integer: "))
 
-#if operation == Add:
-#    print(f"The result of {a} + {b} is {a+b}")
-#elif operation == Substract:
-#    print(f"The result of {a} - {b} is {a-b}")
-#elif operation == Multiply:
-#    print(f"The result of {a} * {b} is {a*b}")
-#elif operation == Divide:
-#    if b == 0:
-#        print("Divisor cannot be 0. Please input a valid number")
-#    else:
-#        print(f"The result of {a} / {b} is {a/b}")
-#elif operation == Integer_Division:
-#    if b == 0:
-#        print("Divisor cannot be 0. Please input a valid number")
-#    else:
-#        print(f"The result of {a} // {b} is {a//b}")
-#elif operation == Modulo:
-#    print(f"The result of {a} % {b} is {a%b}")
-#else:
-#    print("Please choose a valid operation")
+if operation == Add:
+    print(f"The result of {a} + {b} is {a+b}")
+elif operation == Substract:
+    print(f"The result of {a} - {b} is {a-b}")
+elif operation == Multiply:
+    print(f"The result of {a} * {b} is {a*b}")
+elif operation == Divide:
+    if b == 0:
+        print("Divisor cannot be 0. Please input a valid number")
+    else:
+        print(f"The result of {a} / {b} is {a/b}")
+elif operation == Integer_Division:
+    if b == 0:
+        print("Divisor cannot be 0. Please input a valid number")
+    else:
+        print(f"The result of {a} // {b} is {a//b}")
+elif operation == Modulo:
+    print(f"The result of {a} % {b} is {a%b}")
+else:
+    print("Please choose a valid operation")
     
 
 

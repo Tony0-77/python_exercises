@@ -1,0 +1,33 @@
+Github Instruction Guide on How to Create a Local Pull Request
+
+1. Locate reporsitory you want to contribute to.
+2. Using a terminal (in this case, GIT BASH) clone the remote repository
+   Set directory on where to clone repository on your local machine
+	- cd desktop
+   Type this command to clone the remote repository
+	- git clone 'repository url'
+3. Navigate to the repository directory
+   Change your working directory to the cloned repository
+	- cd 'cloned-repository'
+4. Create new branch for your changes
+   Create a branch with the name identical to the original repository
+	- git branch 'branch-name'
+   Switch to the created branch
+	- git switch 'branch-name'
+   Optional Step: Check if your currently working in the switched branch
+	- git branch
+	note: highligted branch is the one you are currently in
+5. Pull all files from the original repository
+	- git pull origin 'branch-name'
+6. Make your necessary changes. Modify files, add new files, or make any changes as needed.
+7. Check if your changes are ready to be commited.
+	- git status
+8. Stage your changes.
+   After making changes, you need to stage the files to be committed. To stage all modified files, use:
+	- git add .
+9. Commit your changes
+   Commit your staged changes with a clear commit message
+	- git commit -m "Brief description of changes"
+10. Push your changes to the remote repository
+	- git push -u origin 'branch-name'
+
