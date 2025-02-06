@@ -1036,3 +1036,136 @@ if os.path.isfile(file_path):
     print(f"The file {file_path} exists")
 else:
     print(f"The file {file_path} doesn't exist")
+
+##exercise 92-97.4
+def convert_seconds(seconds):
+    minutes = seconds // 60
+    
+    hours = seconds / 3600
+    
+    print(f"{seconds} seconds is equivalent to:")
+    print(f"{minutes} Minutes")
+    print(f"{hours:.2f} Hours")
+
+seconds_input = int(input("Enter the number of seconds: "))
+convert_seconds(seconds_input)
+
+##exercise 92-97.6
+import math
+
+def calculate_area(diameter):
+    radius = diameter / 2
+    
+    area = math.pi * (radius ** 2)
+    
+    area = round(area, 2)
+    
+    print(f"The area of a circle with diameter {diameter} is {area}")
+
+diameter = int(input("Enter the diameter of the circle: "))
+
+calculate_area(diameter)
+
+
+##exercise 92-97.9
+try:
+    base = float(input("Enter the base of the triangle: "))
+    height = float(input("Enter the height of the triangle: "))
+
+    if base <= 0 or height <= 0:
+        print("Please enter valid values for base and height")
+    else:
+        area = (base * height) / 2
+        print(f"The area of the triangle is {round(area, 2)}")
+
+except ValueError:
+    print("Please enter valid values for base and height")
+
+
+##exercise 92-97.11
+celsius = float(input("Enter the temperature in Celsius: "))
+
+fahrenheit = (celsius * 9/5) + 32
+
+print(f"{celsius} Celsius = {fahrenheit} Fahrenheit")
+
+
+##exercise 92-97.13
+fahrenheit = float(input("Enter the temperature in Fahrenheit: "))
+
+celsius = (fahrenheit - 32) * 5/9
+
+print(f"{fahrenheit} Fahrenheit = {celsius} Celsius")
+
+##exercise 98-101.1
+height_cm = float(input("Enter your height in centimeters: "))
+weight_kg = float(input("Enter your weight in kilograms: "))
+
+height_m = height_cm / 100
+
+bmi = weight_kg / (height_m ** 2)
+
+bmi_rounded = round(bmi, 2)
+
+if bmi < 18.5:
+    category = "Underweight"
+elif 18.5 <= bmi < 24.9:
+    category = "Normal"
+elif 25 <= bmi < 29.9:
+    category = "Overweight"
+else:
+    category = "Obesity"
+
+print(f"BMI: {bmi_rounded}, Category: {category}")
+
+
+##exercise 98-101.3
+import calendar
+
+try:
+    month = int(input("Enter the month (1-12): "))
+    year = int(input("Enter the year: "))
+
+    if month < 1 or month > 12:
+        print("Please enter a valid month between 1 and 12.")
+    else:
+        print(calendar.month(year, month))
+        
+except ValueError:
+    print("Please enter valid integers for the month and year.")
+
+
+##exercise 98-101.6
+from datetime import date
+
+try:
+    year1, month1, day1 = map(int, input("Enter the first date (Year Month Day): ").split())
+    year2, month2, day2 = map(int, input("Enter the second date (Year Month Day): ").split())
+
+    date1 = date(year1, month1, day1)
+    date2 = date(year2, month2, day2)
+
+    if date1 > date2:
+        print("Please enter valid dates")
+    elif date1 == date2:
+        print("The dates are equal")
+    else:
+        delta = (date2 - date1).days
+        if delta == 1:
+            print("There is 1 day between these dates.")
+        else:
+            print(f"There are {delta} days between these dates.")
+except ValueError:
+    print("Please enter valid dates in the format Year Month Day.")
+
+##exercise 98-101.8
+import re
+
+user_input = input("Enter a string: ")
+
+pattern = r"^My\w*$"  # Starts with 'My' and only contains alphanumeric characters (word characters)
+
+if re.match(pattern, user_input) and user_input.endswith("blue"):
+    print("Match")
+else:
+    print("Not Match")
