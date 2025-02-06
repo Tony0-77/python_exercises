@@ -1,14 +1,15 @@
-1. git branch github_how_to
+1. Clone repository using github desktop
+2. git branch github_how_to
     -this is to create a branch in your local machine
-2. git switch github_how_to
+3. git switch github_how_to
     -to switch branch from main to github_how_to 
-3. git status
-    -check the changes made in the branch
-4. git pull origin github_how_to
-    -pull the changes made from the stage to your local machine
-5. git add .
-    -add the changes made from your local machine
-6. git commit -m "commit for hannah solutions and github guide"     
+4. git status
+    -shows the current state of your working directory and staging area
+5. git pull origin github_how_to
+    -used to fetch and merge changes from the remote github_how_to branch into your current local branch
+6. git add .
+    -used to stage all changes for the next commit
+7. git commit -m "commit for hannah solutions and github guide"     
     -add message to your commit
-7. git push -u origin github_how_to
-    -upload changes to github
+8. git push -u origin github_how_to
+    -used to push your local branch (github_how_to) to the remote repository, and it also sets up the upstream tracking relationship for that branch
