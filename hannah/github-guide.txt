@@ -11,3 +11,4 @@
 6. git commit -m "commit for hannah solutions and github guide"     
     -add message to your commit
 7. git push -u origin github_how_to
+    -upload changes to github
