@@ -1,0 +1,19 @@
+--Activate virtual environment in VS code bash terminal
+1. cd C:/Users/SGANO/Documents/PythonTrainingVenv
+2. source Scripts/activate
+--Clone repository to local
+3. git clone https://github.com/Tony0-77/python_exercises
+4. git status
+--Go to branch github_how_to
+5. git checkout github_how_to
+--Pull from remote to local branch 
+6. git pull
+--Add files edited files
+7. git add .
+--Commit changes to local
+8. git commit -m 'Initial commit'
+--Push changes to remote branch
+9. git push
+--Create pull request in remote repository
+--Add commit message (for merging to main)
+

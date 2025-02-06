@@ -1,0 +1,14 @@
+// create a local branch on your local machine
+1. git branch github_how_to
+// execute pull from main branch
+2. git pull origin main
+// see which changes have been staged, which haven't, and which files aren't being tracked by Git
+3. git status
+// add changes that you have created on your current folder on your local machine
+4. git add .
+// see which changes have been staged, which haven't, and which files aren't being tracked by Git
+5. git status
+// add message to commit
+6. git commit -m "initial commit for github instructions"
+// upload changes on your current branch(github_how_to) on your local machine to github remotely
+7. git push -u origin github_how_to

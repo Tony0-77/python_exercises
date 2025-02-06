@@ -1,0 +1,54 @@
+In vs code open new Git bash terminal
+Activate virtual environment
+-> source virtual_environment/Scripts/activate
+Clone the project into your local branch repository
+-> git clone https://github.com/Tony0-77/python_exercises.git
+Go to project directory
+-> cd python_exercises
+Switch to branch github_how_to
+-> git checkout github_how_to
+Check the status of the repository
+-> git status
+Create a folder and name it with your initial then add the solution file in your folder
+Add your folder to your local repository
+-> git add .
+Commit to save the change to your local repository with message
+-> git commit -m "First commit"
+If you got error e.g."fatal: unable to auto-detect email address"
+Set up your account first
+-> git config user.email "ldellosa@77global.biz"
+-> git config user.name "Leo Dellosa"
+Then run the commit command again
+-> git commit -m "First commit"
+Double check if your working tree is clean
+-> git status
+Push changes to remote repository
+-> git push
+If you got error e.g.("remote: Permission to Tony0-77/python_exercises.git denied to Leodellosa85.
+fatal: unable to access 'https://github.com/Tony0-77/python_exercises.git/': The requested URL returned error: 403")
+This happens when Git is using cached credentials if you're using different github account
+Open Credential Manager (press Win + R and type control to open the Control Panel).
+Go to User Accounts > Credential Manager.
+Look for any entries with git:https://github.com and delete them.
+Then run git push again
+Git will prompt you to enter your username and password 
+(or personal access token), and this time you can enter the correct credentials for your next account.
+Check your remote repository if the changes uploaded
+
+Pull the latest update from remote branch repository
+-> git pull
+Create a txt file in your folder (instruction_guide.txt)
+Add your file into your local repository
+-> git add .
+Check your changes to be committed
+-> git status
+Commit to save the change to your local repository with message
+-> git commit -m "Adding instruction guide"
+Double check if your working tree is clean
+-> git status
+Push changes to remote repository
+-> git push
+
+
+
+	 
