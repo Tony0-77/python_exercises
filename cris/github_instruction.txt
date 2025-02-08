@@ -1,1 +1,34 @@
-git 
+1. Create a Local Branch on Your Machine
+     branch github_how_to
+
+2. Switch to the New Branch
+    git checkout github_how_to
+
+3. Pull the Latest Changes from the github_how_to Branch
+    git pull origin github_how_to
+//This ensures your local repository is up-to-date with the latest changes from the github_how_to branch.
+
+4. Check the Status of Your Changes
+    git status
+This command shows:
+Which files have been modified.
+Which files are staged (ready to be committed).
+Which files are untracked (new files not yet added to Git).
+
+5. Add All Changes to the Staging Area
+    git add .
+Stages all changes in the current directory for commit.
+
+6. Check the Status Again
+    git status
+Now, Git will show that your changes are staged and ready to be committed.
+
+7. Commit Your Changes with a Message
+    git commit -m "Initial commit"
+
+8. Push Your Changes to GitHub
+    git push -u origin github_how_to
+
+9. Verify Your Changes on GitHub
+Go to GitHub and check the github_how_to branch to confirm the push was successful.
+---
