@@ -1054,48 +1054,34 @@ if os.path.isfile(file_path):
 else:
     print(f"The file {file_path} doesn't exist")
 
-##exercise 92-97.4
-def convert_seconds(seconds):
-    minutes = seconds // 60
-    
-    hours = seconds / 3600
-    
-    print(f"{seconds} seconds is equivalent to:")
-    print(f"{minutes} Minutes")
-    print(f"{hours:.2f} Hours")
 
-seconds_input = int(input("Enter the number of seconds: "))
-convert_seconds(seconds_input)
+##exercise 92-97.2
+from datetime import datetime
+
+now = datetime.now()
+print("Current Date and Time:")
+print(now.strftime("%Y-%m-%d %H:%M:%S"))
+
+##exercise 92-97.4
+
+seconds = int(input("Enter seconds: "))
+print(f"Minutes: {seconds // 60}, Seconds: {seconds % 60}")
+print(f"Hours: {seconds / 3600:.2f}")
 
 ##exercise 92-97.6
+
 import math
 
-def calculate_area(diameter):
-    radius = diameter / 2
-    
-    area = math.pi * (radius ** 2)
-    
-    area = round(area, 2)
-    
-    print(f"The area of a circle with diameter {diameter} is {area}")
-
-diameter = int(input("Enter the diameter of the circle: "))
-
-calculate_area(diameter)
+d = int(input("Enter diameter: "))
+print(f"Area of the circle: {math.pi * (d / 2) ** 2:.2f}")
 
 
 ##exercise 92-97.9
-try:
-    base = float(input("Enter the base of the triangle: "))
-    height = float(input("Enter the height of the triangle: "))
-
-    if base <= 0 or height <= 0:
-        print("Please enter valid values for base and height")
-    else:
-        area = (base * height) / 2
-        print(f"The area of the triangle is {round(area, 2)}")
-
-except ValueError:
+b = int(input("Enter base: "))
+h = int(input("Enter height: "))
+if b > 0 and h > 0:
+    print(f"Area: {(b * h) / 2:.2f}")
+else:
     print("Please enter valid values for base and height")
 
 
@@ -1118,9 +1104,7 @@ print(f"{fahrenheit} Fahrenheit = {celsius} Celsius")
 height_cm = float(input("Enter your height in centimeters: "))
 weight_kg = float(input("Enter your weight in kilograms: "))
 
-height_m = height_cm / 100
-
-bmi = weight_kg / (height_m ** 2)
+bmi = weight_kg / ((height_cm/100) ** 2)
 
 bmi_rounded = round(bmi, 2)
 
@@ -1177,15 +1161,14 @@ except ValueError:
 
 ##exercise 98-101.8
 import re
+s = 'My pants are blue'
+pattern = r'^My(?:\s\w+)*\sblue$'
 
-user_input = input("Enter a string: ")
-
-pattern = r"^My\w*$"  
-
-if re.match(pattern, user_input) and user_input.endswith("blue"):
+is_match = re.match(pattern, s)
+if is_match:
     print("Match")
 else:
-    print("Not Match")
+    print("No Match")
 
 
 
